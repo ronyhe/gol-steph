@@ -1,0 +1,12 @@
+{
+  "overrides": [
+    {
+      "test": "**/*.steph.js",
+      "plugins": [
+        ["babel-plugin-steph-js", {
+          "ramdaImport": "node"
+        }]
+      ]
+    }
+  ]
+}

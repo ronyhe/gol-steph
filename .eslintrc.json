@@ -1,0 +1,24 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "plugins": ["prettier", "ramda-env"],
+  "rules": {
+    "prettier/prettier": [
+      "error"
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.steph.js"],
+      "env": {
+        "ramda-env/ramda": true
+      }
+    }
+  ]
+}
