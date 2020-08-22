@@ -2272,7 +2272,7 @@ fsevents@~2.1.2:
     eslint-plugin-ramda-env: ^1.0.1
     prettier: ^2.0.5
     ramda: ^0.27.1
-    steph-js: ^0.0.3
+    steph-js: ^0.0.4
   languageName: unknown
   linkType: soft
 
@@ -4523,16 +4523,16 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"steph-js@npm:^0.0.3":
-  version: 0.0.3
-  resolution: "steph-js@npm:0.0.3"
+"steph-js@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "steph-js@npm:0.0.4"
   dependencies:
     "@babel/core": ^7.11.1
     husky: ^4.2.5
     ramda: ^0.27.0
   bin:
     steph: src/cli.js
-  checksum: ea0640b5ef09d18522df4d90bc63118d6433cf3f1591b50112e64e24233de64196f7d8253952217f4bb70a364c2ba64446dd60576172eab5187d8fa7932747dd
+  checksum: 775e3c36b412892aca11826e4956ab642fe76483f3d9339f82176d9fdf5499de87523542c8d4bbc42aa82800e2f4d3485eaf42cea15b226dd82227a55994db75
   languageName: node
   linkType: hard
 

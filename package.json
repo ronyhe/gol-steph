@@ -31,6 +31,6 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-ramda-env": "^1.0.1",
     "prettier": "^2.0.5",
-    "steph-js": "^0.0.3"
+    "steph-js": "^0.0.4"
   }
 }

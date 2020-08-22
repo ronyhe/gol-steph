@@ -75,7 +75,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "steph-js",
-        "npm:0.0.3"
+        "npm:0.0.4"
       ]
     ],
     "locationBlacklistData": [
@@ -96,7 +96,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-ramda-env", "virtual:b9fc59b2f2c9d93c21e489cb30984b0d1b178734adfa7692f27fdf91261e7b1daf1dca614d0d8aa9dfd9777ce556c98e6a0eecf6d397419e2b6a24116ad08eda#npm:1.0.1"],
             ["prettier", "npm:2.0.5"],
             ["ramda", "npm:0.27.1"],
-            ["steph-js", "npm:0.0.3"]
+            ["steph-js", "npm:0.0.4"]
           ],
           "linkType": "SOFT",
         }]
@@ -929,7 +929,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/$$virtual/babel-plugin-steph-js-virtual-526104e2fc/0/cache/babel-plugin-steph-js-npm-0.0.1-454dd4844a-37fd1b7524.zip/node_modules/babel-plugin-steph-js/",
           "packageDependencies": [
             ["babel-plugin-steph-js", "virtual:b9fc59b2f2c9d93c21e489cb30984b0d1b178734adfa7692f27fdf91261e7b1daf1dca614d0d8aa9dfd9777ce556c98e6a0eecf6d397419e2b6a24116ad08eda#npm:0.0.1"],
-            ["steph-js", "npm:0.0.3"]
+            ["steph-js", "npm:0.0.4"]
           ],
           "packagePeers": [
             "steph-js"
@@ -2627,7 +2627,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-ramda-env", "virtual:b9fc59b2f2c9d93c21e489cb30984b0d1b178734adfa7692f27fdf91261e7b1daf1dca614d0d8aa9dfd9777ce556c98e6a0eecf6d397419e2b6a24116ad08eda#npm:1.0.1"],
             ["prettier", "npm:2.0.5"],
             ["ramda", "npm:0.27.1"],
-            ["steph-js", "npm:0.0.3"]
+            ["steph-js", "npm:0.0.4"]
           ],
           "linkType": "SOFT",
         }]
@@ -5140,10 +5140,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["steph-js", [
-        ["npm:0.0.3", {
-          "packageLocation": "./.yarn/cache/steph-js-npm-0.0.3-59b0e03fd7-ea0640b5ef.zip/node_modules/steph-js/",
+        ["npm:0.0.4", {
+          "packageLocation": "./.yarn/cache/steph-js-npm-0.0.4-e7f75748d9-775e3c36b4.zip/node_modules/steph-js/",
           "packageDependencies": [
-            ["steph-js", "npm:0.0.3"],
+            ["steph-js", "npm:0.0.4"],
             ["@babel/core", "npm:7.11.1"],
             ["husky", "npm:4.2.5"],
             ["ramda", "npm:0.27.1"]
