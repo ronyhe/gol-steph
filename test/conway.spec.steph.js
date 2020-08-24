@@ -21,3 +21,19 @@ test('neighbors', t => {
     t.deepEqual(neighbors(2, 2), [ff, tt, tt])
     t.deepEqual(neighbors(1, 1), [ff, tt, ff, tt, tt, ff, tt, ff])
 })
+
+test('coordinates', t => {
+    t.deepEqual(Board.coordinates(), [
+        [0, 0],
+        [1, 0],
+        [2, 0],
+
+        [0, 1],
+        [1, 1],
+        [2, 1],
+
+        [0, 2],
+        [1, 2],
+        [2, 2]
+    ])
+})

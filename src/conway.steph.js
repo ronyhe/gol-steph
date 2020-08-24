@@ -2,6 +2,8 @@ const pairWith = flip(pair)
 
 const tripleRange = n => range(n - 1, n + 2)
 
+const mapIndexed = addIndex(map)
+
 const makeBoard = cells => {
     const width = head(cells).length
     const height = cells.length
@@ -19,7 +21,9 @@ const makeBoard = cells => {
 
     return {
         get: ifElse(inBounds, rawGet, always(null)),
-        getNeighbors: ifElse(inBounds, rawNeighbors, always([]))
+        getNeighbors: ifElse(inBounds, rawNeighbors, always([])),
+        coordinates: () =>
+            chain(y => map(pairWith(y), range(0, width)), range(0, height))
     }
 }
 
