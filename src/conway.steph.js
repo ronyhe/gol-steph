@@ -2,8 +2,6 @@ const pairWith = flip(pair)
 
 const tripleRange = n => range(n - 1, n + 2)
 
-const mapIndexed = addIndex(map)
-
 const makeBoard = cells => {
     const width = head(cells).length
     const height = cells.length
