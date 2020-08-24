@@ -11,12 +11,10 @@ const makeBoard = cells => {
     const rawGet = ([x, y]) => cells[y][x]
 
     const rawNeighbors = ([x, y]) => {
-        const allCoordinates = chain(
-            row => map(pairWith(row), tripleRange(x)),
-            tripleRange(y)
-        )
-        const relevant = filter(inBounds, allCoordinates)
-        return map(rawGet, without([[x, y]], relevant))
+        const makeRow = y => map(pairWith(y), tripleRange(x))
+        const allCoordinates = chain(makeRow, tripleRange(y))
+        const relevant = pipe(filter(inBounds), without([[x, y]]))
+        return map(rawGet, relevant(allCoordinates))
     }
 
     return {
