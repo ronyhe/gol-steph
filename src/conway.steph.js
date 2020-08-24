@@ -1,7 +1,7 @@
 const makeBoard = cells => {
     const width = head(cells).length
     const height = cells.length
-    const inBounds = ([x, y]) => y < height && x < width
+    const inBounds = ([x, y]) => y >= 0 && x >= 0 && y < height && x < width
     const rawGet = ([x, y]) => cells[y][x]
     const rawNeighbors = ([x, y]) => {
         const rowAbove = [
@@ -11,7 +11,6 @@ const makeBoard = cells => {
         ]
         const sameRow = [
             [x - 1, y],
-            [x, y],
             [x + 1, y]
         ]
         const rowBelow = [
