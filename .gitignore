@@ -11,3 +11,4 @@
 .DS_Store
 
 node_modules/.cache/@babel/register/.babel.7.11.1.test.json
+dist/
