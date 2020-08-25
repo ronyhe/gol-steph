@@ -1,5 +1,10 @@
 const test = require('ava')
-const { getCell, getNeighbors, getCoordinates } = require('../src/conway.steph')
+const {
+    getCell,
+    getNeighbors,
+    getCoordinates,
+    transformCell
+} = require('../src/conway.steph')
 
 const [tt, ff] = [true, false]
 const Cells = [
@@ -36,4 +41,8 @@ test('coordinates', t => {
         [1, 2],
         [2, 2]
     ])
+})
+
+test('Any live cell with fewer than two live neighbours dies', t => {
+    t.false(transformCell([[true]], [0, 0]))
 })

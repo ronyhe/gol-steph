@@ -30,8 +30,22 @@ const getCoordinates = board =>
         range(0, height(board))
     )
 
+const liveNeighborCount = board =>
+    pipe(getNeighbors(board), filter(identity), length)
+
+const transformCell = (board, coord) => {
+    const alive = getCell(board, coord)
+    const liveNeighbors = liveNeighborCount(board, coord)
+    if (alive) {
+        return includes([2, 3], liveNeighbors)
+    } else {
+        return liveNeighbors === 3
+    }
+}
+
 module.exports = {
     getCell,
     getNeighbors,
-    getCoordinates
+    getCoordinates,
+    transformCell
 }
