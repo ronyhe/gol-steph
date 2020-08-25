@@ -1,10 +1,5 @@
 const test = require('ava')
-const {
-    makeBoard,
-    getCell,
-    getNeighbors,
-    getCoordinates
-} = require('../src/conway.steph')
+const { getCell, getNeighbors, getCoordinates } = require('../src/conway.steph')
 
 const [tt, ff] = [true, false]
 const Cells = [
@@ -12,7 +7,6 @@ const Cells = [
     [tt, ff, tt],
     [ff, tt, ff]
 ]
-const Board = makeBoard(Cells)
 
 test('get returns value', t => {
     const cell = getCell(Cells)
