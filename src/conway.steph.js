@@ -25,6 +25,17 @@ const makeBoard = cells => {
     }
 }
 
+const rawGet = (board, [x, y]) => board[y][x]
+
+const inBounds = (board, [x, y]) => {
+    const height = board.length
+    const width = head(board).length
+    return y >= 0 && x >= 0 && y < height && x < width
+}
+
+const getCell = board => ifElse(inBounds(board), rawGet(board), always(null))
+
 module.exports = {
+    getCell,
     makeBoard
 }

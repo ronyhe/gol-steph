@@ -1,18 +1,19 @@
 const test = require('ava')
-const { makeBoard } = require('../src/conway.steph')
+const { makeBoard, getCell } = require('../src/conway.steph')
 
 const [tt, ff] = [true, false]
-const Board = makeBoard([
+const Cells = [
     [ff, tt, ff],
     [tt, ff, tt],
     [ff, tt, ff]
-])
+]
+const Board = makeBoard(Cells)
 
 test('get returns value', t => {
-    const cell = (x, y) => Board.get([x, y])
-    t.deepEqual(cell(0, 0), ff)
-    t.deepEqual(cell(1, 1), ff)
-    t.deepEqual(cell(4, 4), null)
+    const cell = getCell(Cells)
+    t.deepEqual(cell([0, 0]), ff)
+    t.deepEqual(cell([1, 1]), ff)
+    t.deepEqual(cell([4, 4]), null)
 })
 
 test('neighbors', t => {
