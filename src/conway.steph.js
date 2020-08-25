@@ -25,10 +25,12 @@ const makeBoard = cells => {
     }
 }
 
+const height = length
+
+const width = pipe(head, length)
+
 const inBounds = (board, [x, y]) => {
-    const height = board.length
-    const width = head(board).length
-    return y >= 0 && x >= 0 && y < height && x < width
+    return y >= 0 && x >= 0 && y < height(board) && x < width(board)
 }
 
 const rawGet = (board, [x, y]) => board[y][x]
@@ -45,8 +47,15 @@ const getNeighbors = board =>
 
 const getCell = board => ifElse(inBounds(board), rawGet(board), always(null))
 
+const getCoordinates = board =>
+    chain(
+        y => map(pairWith(y), range(0, width(board))),
+        range(0, height(board))
+    )
+
 module.exports = {
     getCell,
     getNeighbors,
+    getCoordinates,
     makeBoard
 }

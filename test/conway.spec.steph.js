@@ -1,5 +1,10 @@
 const test = require('ava')
-const { makeBoard, getCell, getNeighbors } = require('../src/conway.steph')
+const {
+    makeBoard,
+    getCell,
+    getNeighbors,
+    getCoordinates
+} = require('../src/conway.steph')
 
 const [tt, ff] = [true, false]
 const Cells = [
@@ -24,7 +29,7 @@ test('neighbors', t => {
 })
 
 test('coordinates', t => {
-    t.deepEqual(Board.coordinates(), [
+    t.deepEqual(getCoordinates(Cells), [
         [0, 0],
         [1, 0],
         [2, 0],
