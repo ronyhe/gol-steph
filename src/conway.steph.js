@@ -25,17 +25,28 @@ const makeBoard = cells => {
     }
 }
 
-const rawGet = (board, [x, y]) => board[y][x]
-
 const inBounds = (board, [x, y]) => {
     const height = board.length
     const width = head(board).length
     return y >= 0 && x >= 0 && y < height && x < width
 }
 
+const rawGet = (board, [x, y]) => board[y][x]
+
+const rawNeighbors = (board, [x, y]) => {
+    const makeRow = y => map(pairWith(y), tripleRange(x))
+    const allCoordinates = chain(makeRow, tripleRange(y))
+    const relevant = pipe(filter(inBounds(board)), without([[x, y]]))
+    return map(rawGet(board), relevant(allCoordinates))
+}
+
+const getNeighbors = board =>
+    ifElse(inBounds(board), rawNeighbors(board), always([]))
+
 const getCell = board => ifElse(inBounds(board), rawGet(board), always(null))
 
 module.exports = {
     getCell,
+    getNeighbors,
     makeBoard
 }

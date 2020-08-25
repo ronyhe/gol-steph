@@ -1,5 +1,5 @@
 const test = require('ava')
-const { makeBoard, getCell } = require('../src/conway.steph')
+const { makeBoard, getCell, getNeighbors } = require('../src/conway.steph')
 
 const [tt, ff] = [true, false]
 const Cells = [
@@ -17,10 +17,10 @@ test('get returns value', t => {
 })
 
 test('neighbors', t => {
-    const neighbors = (x, y) => Board.getNeighbors([x, y])
-    t.deepEqual(neighbors(0, 0), [tt, tt, ff])
-    t.deepEqual(neighbors(2, 2), [ff, tt, tt])
-    t.deepEqual(neighbors(1, 1), [ff, tt, ff, tt, tt, ff, tt, ff])
+    const neighbors = getNeighbors(Cells)
+    t.deepEqual(neighbors([0, 0]), [tt, tt, ff])
+    t.deepEqual(neighbors([2, 2]), [ff, tt, tt])
+    t.deepEqual(neighbors([1, 1]), [ff, tt, ff, tt, tt, ff, tt, ff])
 })
 
 test('coordinates', t => {
